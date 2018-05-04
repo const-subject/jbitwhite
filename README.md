@@ -65,7 +65,7 @@ String response = btw.getApi().post("peer/transactions").setObject(tr).execute()
 System.out.println(response);
 ```
 
-###By default, the SDK runs on the test network to attach to the main use:
+### By default, the SDK runs on the test network to attach to the main use:
 ```
 new JBitWhite ("http://[your-node-ip]:[your-node-port]/", " 5f5b3cf7");
 ```
