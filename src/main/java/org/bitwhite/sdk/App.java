@@ -12,7 +12,7 @@ import org.bitwhite.sdk.trs.Transaction;
 public class App {
     
 	public static void main( String[] args ) throws ClientProtocolException, IOException {
-		JBitWhite btw = new JBitWhite(new Api(BTWConst.DEFAULT_HOST));
+		JBitWhite btw = new JBitWhite(BTWConst.DEFAULT_HOST, BTWConst.MAGIC);
 		
 		// 12468859099970550180 - Account in testnet (http://51.254.246.147:8888)
 		final String SECRET_KEY = "pause easy abuse core hold caught oval theme border purpose index torch";
@@ -35,11 +35,8 @@ public class App {
     	security.prepareTransaction(tr, keypair.getPrivate(), null);
     	
     	
-    	
-    	
     	String response = btw.getApi().post("peer/transactions").setObject(tr).execute();
     	System.out.println(response);
-		
     }
     
         

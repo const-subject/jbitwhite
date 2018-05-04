@@ -11,13 +11,17 @@ public final class JBitWhite {
 	private Api api;
 	
 	
-	public JBitWhite(Api api) {
-		this(api, new Security());
+	public JBitWhite(String api) {
+		this(api, BTWConst.MAGIC, new Security());
 	}
 	
-	public JBitWhite(Api api, Security security) {
+	public JBitWhite(String api, String magic) {
+		this(api, magic, new Security());
+	}
+	
+	public JBitWhite(String api, String magic, Security security) {
 		this.security = security;
-		this.api = api;
+		this.api = new Api(api, magic);
 	}
 	
 	public Security getSecurity() {
