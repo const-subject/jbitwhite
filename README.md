@@ -39,5 +39,5 @@ System.out.println("Seed: " + secret);
 
 By default, the SDK runs on the test network to attach to the main use:
 ```
-new JBitWhite ("http: / / [your-node-ip]: [your-node-port]/", " 5f5b3cf7");
+new JBitWhite ("http://[your-node-ip]:[your-node-port]/", " 5f5b3cf7");
 ```
