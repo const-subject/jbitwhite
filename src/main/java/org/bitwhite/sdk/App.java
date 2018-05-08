@@ -26,7 +26,7 @@ public class App {
                 .setTransactionType(Transaction.TYPE_TRANSFER)
                 .setAmount(100000000L)
                 .setFee(10000000L)
-                .setRecipientId("1")
+                .setRecipientId("11780464196907243002")
                 .setTimestamp(security.getTransactionTimestamp())
                 .setSenderPublicKey(publicKey)
                 .setMessage("")

@@ -215,13 +215,6 @@ public class Transaction implements Serializable {
             int fromIndex = idBuffer.length > 8 ? idBuffer.length - 8 : 0;
             byte[] result = new byte[8];
             System.arraycopy(idBuffer, fromIndex, result, 0, length);
-            
-            for (int left = 0, right = result.length - 1; left < right; left++, right--) {
-                
-                byte temp = result[left];
-                result[left]  = result[right];
-                result[right] = temp;
-            }
             return result;
         }
 
